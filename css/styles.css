@@ -272,7 +272,7 @@ h1,h2,h3,h4,h5,h6,ul,p {
 .button-service {
     background-color: var(--button-font-color);
     color: var(--main-background-color);
-    padding: 16px 33px;
+    padding: 16px 32px;
     font-size: 16px;
     line-height: 1.5;
     font-weight: 500;
@@ -800,6 +800,7 @@ img {
     display: flex;
     list-style: none;
     gap: 16px;
+    margin-right: 80px;
 }
 
 .links {
@@ -868,6 +869,17 @@ img {
     background-color: #FCFCFC;
 }
 
+.modal-form {
+    position: relative;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-height: 576px;
+    min-width: 408px;
+}
+
 .button-close {
     display: flex;
     justify-content: center;
@@ -888,6 +900,7 @@ img {
     right: 24px;
 
     transition: background-color 250ms var(--timing-function);
+
 }
 
 .button-close:hover {
@@ -952,4 +965,272 @@ img {
     font-size: 16px;
     letter-spacing: 0.02em;
     line-height: 1.5;
+}
+
+.form {
+    width: 408px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-bottom: 8px; */
+}
+
+.form-field input {
+    margin: 0;
+    padding: ;
+    border-radius: 4px;
+    border: 1px solid #2E2F42;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    opacity: 0.2;
+
+    width: 360px;
+    height: 40px;
+
+    transition: border 250ms var(--timing-function);
+
+}
+
+.form-field:hover input {
+    border: 1px solid var(--button-font-color);
+    opacity: 1;
+}
+
+.form-field label {
+    margin: 0;
+    padding: ;
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+
+
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start; 
+    margin-left: 24px;
+    margin-bottom: 4px;
+ 
+    
+}
+
+.form-field input::placeholder {
+    /* це текст, геометрія з ним не працює */
+    color: rgba(46, 47, 66, 0.4);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.16;
+}
+
+/* .form-checkbox input[type='checkbox'] {
+    width: 40px;
+    height: 40px;
+} */
+
+.form-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-checkbox label {
+    color: #8E8F99;
+    letter-spacing: 0.04em;
+    line-height: 1.16;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.comment {
+    width: 360px;
+    height: 120px;
+    border-radius: 4px;
+    opacity: 0.2;
+    border: 1px solid #2E2F42;
+    margin-top: 4px;
+}
+
+.form-title {
+    text-align: center;
+    color: var(--second-font-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+
+    max-width: 360%;
+
+    padding: 0;
+
+    margin-top: 24px;
+    margin-bottom: 16px;
+
+}
+
+.form-button {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-family: 'Roboto', sans-serif; 
+    background-color: var(--button-font-color);
+    color: var(--main-background-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--button-font-color);
+    border-radius: 4px;
+    width: 169px;
+    height: 56px;
+    padding: 16px 32px;
+
+        /* transition: color 250ms var(--timing-function),
+            background-color 250ms var(--timing-function),
+            box-shadow 250ms var(--timing-function),
+            border 250ms var(--timing-function),
+            border-radius 250ms var(--timing-function); */
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--accent-color);
+    color: var(--main-background-color);
+    border-radius: 4px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+
+/* footer form */
+
+.footer-header {
+    font-size: 16px;
+    color: var(--main-background-color);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-weight: 500px;
+    margin-bottom: 16px;
+}
+
+
+.footer-form input {
+    width: 264px;
+    background-color: var(--second-font-color);
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    margin-right: 24px;
+
+}
+
+.footer-form input::placeholder {
+    /* це текст, геометрія з ним не працює */
+    color: var(--main-background-color);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.16;
+}
+
+.button-subscribe {
+    width: 165px;
+    height: 40px;
+    background-color: var(--button-font-color);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--button-font-color);
+    color: var(--main-background-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500px;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+}
+
+.button-subscribe:hover,
+.button-subscribe:focus {
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: var(--main-background-color);
+
+}
+
+.footer-add {
+    display: flex;
+}
+
+
+.svg-subscribe {
+    width: 24px;
+    height: 24px;
+}
+
+/* footer form */
+
+
+.form-label {
+    color: #8E8F99;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04;
+    font-weight: 400px;
+
+
+
+
+}
+
+.form-icon {
+    position: absolute;
+    fill: #2E2F42;
+
+    transition: fill 250ms var(--timing-function);
+    /* bottom: 0;
+    left: 70%; */
+    /* transform: translate(-70%); */
+}
+
+.form-icon:hover {
+    fill: var(--button-font-color);
+}
+
+.conditions {
+    font-size: 12px;
+    font-weight: 400px;
+    line-height: 1.16;
+    letter-spacing: 0.04;
+    color: #8E8F99; 
+
+}
+
+.policy {
+    font-size: 12px;
+    font-weight: 400px;
+    line-height: 1.16;
+    letter-spacing: 0.04;
+    color:  var(--button-font-color);
+
 }
