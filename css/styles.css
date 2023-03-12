@@ -1003,7 +1003,7 @@ img {
 
 }
 
-.form-field:hover input {
+.form-field:focus input {
     border: 1px solid var(--button-font-color);
     opacity: 1;
 }
@@ -1213,7 +1213,7 @@ img {
     /* transform: translate(-70%); */
 }
 
-.form-icon:hover {
+.form-icon:focus {
     fill: var(--button-font-color);
 }
 
