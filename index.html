@@ -368,7 +368,7 @@
     <!-- Page footer -->
     <footer class="footer">
         <div class="container container-footer">
-            <div>
+            <div class="footer-one">
                 <a class="logotype-footer" href="./index.html">Web<span class="part-color">STUDIO</span></a>
 
                 <p class="text-footer">Increase the flow of customers and <br class="footer-hyphen"> or your business with digital
@@ -376,7 +376,7 @@
                 </p>
             </div>
 
-            <div>
+            <div class="footer-two">
                 <p class="social-media">Social media</p>
                 
                 <ul class="footer-buttons">
@@ -434,11 +434,14 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button data-modal-close class="button-close" type="button">
-                <svg class="modal-icon">
-                    <use href="./images/symbol-defs.svg#modal-close"></use>
-                </svg>
-            </button>
+            <div class="button-all">
+                <button data-modal-close class="button-close" type="button">
+                    <svg class="modal-icon">
+                        <use href="./images/symbol-defs.svg#modal-close"></use>
+                    </svg>
+                </button>
+            </div>
+            
         </div>
 
         <div class="modal-form">
@@ -446,38 +449,53 @@
                 <h2 class="form-title">Leave your contacts and we will call you back</h2>
                 <!-- замість div можна використовувати p, ul -->
                 <div class="form-field">
-                    <label for="name" class="form-label">
+                    <label for="name" class="label-name">Name</label>
+                    <span class="form-label">
                         <svg class="form-icon">
                             <use href="./images/symbol-defs.svg#person"></use>
-                        </svg>Name</label>
+                        </svg>
+                    </span>
                     
                     <input class="form-input" type="text" name="user-name" id="name" autocomplete="on" />
                 </div>
         
                 <div class="form-field">
-                    <label for="tel" class="form-label">
+                    <label for="tel" class="label-name">Phone</label>
+                    <span class="form-label">
                         <svg class="form-icon">
                             <use href="./images/symbol-defs.svg#phone"></use>
-                        </svg>Phone</label>
+                        </svg>
+                    </span>
+           
                     <input class="form-input" type="tel" name="tel" id="tel" autocomplete="on" />
                 </div>
         
                 <div class="form-field">
-                    <label for="email" class="form-label">
+                    <label for="mail" class="label-name">Email</label>
+                    <span class="form-label">
                         <svg class="form-icon">
                             <use href="./images/symbol-defs.svg#email"></use>
-                        </svg>Email</label>
-                    <input class="form-input" type="email" name="email" id="email" autocomplete="on" />
+                        </svg>
+                    </span>
+                        
+                    <input class="form-input" type="email" name="email" id="mail" autocomplete="on" />
                 </div>
         
                 <div class="form-field">
-                    <label for="comment" class="form-label">Comment</label>
-                    <textarea class="comment" name="comment" id="comment" cols="8" rows="" placeholder="Text input"></textarea>
+                    <label for="comment" class="label-name">Comment</label>
+                    <textarea class="comment" name="comment" id="comment" cols="8" placeholder="Text input"></textarea>
                 </div>
         
                 <div class="form-checkbox">
-                    <input class="form-input" type="checkbox" name="policy" id="policy">
-                    <label for="policy" class="conditions">I accept the terms and conditions of the <a href="#" class="policy">Privacy Policy</a></label>
+                    <input class="checkbox" type="checkbox" name="policy" id="policy">
+                    <span class="checkbox-icon"></span>
+                    <label for="policy" class="conditions">
+                        <!-- <svg width="16px" height="16px">
+                            <use href="./images/symbol-defs.svg#checkbox"></use>
+                        </svg> -->
+                        I accept the terms and conditions of the
+                        <a href="#" class="policy">Privacy Policy</a>
+                    </label>
                 </div>
         
                 <div class="form-field">
