@@ -434,76 +434,73 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <div class="button-all">
                 <button data-modal-close class="button-close" type="button">
                     <svg class="modal-icon">
                         <use href="./images/symbol-defs.svg#modal-close"></use>
                     </svg>
                 </button>
-            </div>
-            
-        </div>
-
-        <div class="modal-form">
+            <!-- форму вставляємо в дів модалки, а не створюємо новий дів -->
             <form class="form js-speaker-form">
                 <h2 class="form-title">Leave your contacts and we will call you back</h2>
                 <!-- замість div можна використовувати p, ul -->
                 <div class="form-field">
                     <label for="name" class="label-name">Name</label>
+                    <input class="form-input" type="text" name="user-name" id="name" autocomplete="on" />
                     <span class="form-label">
-                        <svg class="form-icon">
+                        <svg class="form-icon" width="18px" height="24px">
                             <use href="./images/symbol-defs.svg#person"></use>
                         </svg>
                     </span>
-                    
-                    <input class="form-input" type="text" name="user-name" id="name" autocomplete="on" />
+            
+                    <!-- <input class="form-input" type="text" name="user-name" id="name" autocomplete="on" /> -->
                 </div>
-        
+            
                 <div class="form-field">
                     <label for="tel" class="label-name">Phone</label>
+                    <input class="form-input" type="tel" name="tel" id="tel" autocomplete="on" />
                     <span class="form-label">
-                        <svg class="form-icon">
+                        <svg class="form-icon" width="18px" height="24px">
                             <use href="./images/symbol-defs.svg#phone"></use>
                         </svg>
                     </span>
-           
-                    <input class="form-input" type="tel" name="tel" id="tel" autocomplete="on" />
+            
                 </div>
-        
+            
                 <div class="form-field">
                     <label for="mail" class="label-name">Email</label>
+                    <input class="form-input" type="email" name="email" id="mail" autocomplete="on" />
                     <span class="form-label">
-                        <svg class="form-icon">
+                        <svg class="form-icon" width="18px" height="24px">
                             <use href="./images/symbol-defs.svg#email"></use>
                         </svg>
                     </span>
-                        
-                    <input class="form-input" type="email" name="email" id="mail" autocomplete="on" />
+            
                 </div>
-        
+            
                 <div class="form-field">
                     <label for="comment" class="label-name">Comment</label>
                     <textarea class="comment" name="comment" id="comment" cols="8" placeholder="Text input"></textarea>
                 </div>
-        
+            
                 <div class="form-checkbox">
                     <input class="checkbox" type="checkbox" name="policy" id="policy">
                     <span class="checkbox-icon"></span>
                     <label for="policy" class="conditions">
                         <!-- <svg width="16px" height="16px">
-                            <use href="./images/symbol-defs.svg#checkbox"></use>
-                        </svg> -->
+                                        <use href="./images/symbol-defs.svg#checkbox"></use>
+                                    </svg> -->
                         I accept the terms and conditions of the
                         <a href="#" class="policy">Privacy Policy</a>
                     </label>
                 </div>
-        
+            
                 <div class="form-field">
                     <button class="form-button" type="submit">Send</button>
-                </div>
-        
+                </div>      
             </form>
         </div>
+
+       
     </div>
 
     
