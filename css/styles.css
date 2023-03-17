@@ -976,19 +976,20 @@ img {
 }
 
 .form-comment {
+    display: block;
     margin-bottom: 16px;
+    outline: none;
 }
 
 .form-field label {
+    display: block;
+
     margin: 0;
     padding: 0;
 
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.04em;
-
-    margin-bottom: 4px; 
-    
 }
 
 .form-field input::placeholder {
@@ -1019,6 +1020,9 @@ img {
     border-radius: 4px;
     opacity: 0.2;
     border: 1px solid #2E2F42;
+    outline: none;
+
+    margin-top: 4px;
 
     padding-left: 16px;
     padding-top: 8px;
@@ -1168,7 +1172,7 @@ img {
 
     top: 50%;
     left: 19px;
-    transform: translateY(0, -50%);
+    transform: translateY(-50%);
 
     transition: transform 250ms var(--timing-function) ;
 }
@@ -1196,7 +1200,6 @@ img {
     line-height: 1.16;
     letter-spacing: 0.04;
     font-weight: 400px;
-    margin-bottom: 4px;
     margin: 0;
     padding: 0;
 }
@@ -1241,6 +1244,8 @@ img {
     width: 360px;
     height: 40px;
 
+    margin-top: 4px;
+
     padding-left: 38px; /* щоб писалось не з початку інпуту */
 
     transition: border 250ms var(--timing-function),
@@ -1248,10 +1253,12 @@ img {
 }
 
 .form-field:focus input,
-.form-field:hover input {
+.form-field:hover input,
+.form-field:focus-within input{
     border: 1px solid var(--button-font-color);
-    opacity: 1;
     outline: none;
+    opacity: 1;
+    border-radius: 4px;
 }
 
 .form-icon {
@@ -1262,7 +1269,14 @@ img {
 }
 
 
-.form-icon:hover,
-.form-icon:focus {
+.focus:focus-within .form-icon,
+.focus:focus .form-icon,
+.focus:hover .form-icon {
     fill: var(--button-font-color);
+    outline: none;
+    border-radius: 4px;
 }
+
+
+
+
